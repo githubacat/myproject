@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>结算页面</title>
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/closecar.css">
+
+<script language="javascript" src="../js/pcasunzip.js"></script>
+
+<script type="text/javascript">
+function getValue(){ 
+var getpro=document.getElementById("province").value;
+var getcity=document.getElementById("city").value;
+var getarea=document.getElementById("area").value;
+alert(getpro+" "+getcity+" "+getarea);
+ }
+</script>
+
+<body>
+    
+    <!-- //头部 -->
+    <div id="header">
+        <div class="hd_bar">
+            <ul class="welcome">
+                <li>
+                    <a href="../index.html">零食买卖网</a>
+                </li>
+                <li>
+                    <div id="userInfo">
+                        <!-- leson 退出 -->
+                        <!-- 请登录 -->
+                    </div>
+                </li>
+                <li>
+                    <a href="./register.html">免费注册</a>
+                </li>
+            </ul>
+            <ul class="user">
+                <li>
+                    <i class="vipico"><img src="../images/vipico.png" alt=""></i>
+                    <a href="">手机版</a>
+                </li>
+                <li>
+                    <a href="">会员中心</a>
+                </li>
+            </ul>
+        </div>
+        <div class="head_main">
+
+            <div class="logo">
+                <a href="">
+                    <img src="../images/logo.gif" alt="">
+                </a>
+            </div>
+
+            <div class="search_box">
+                <input id="s_input" class="s_input">
+                <button class="submit">搜索</button>
+            </div>
+
+            <div class="search_box_hot">
+                <span>热搜榜：</span>
+                <a href="" target="_blank">旺仔</a>
+                <a href="" target="_blank">糖果</a>
+                <a href="" target="_blank">阿尔卑斯</a>
+                <a href="" target="_blank">旺仔</a>
+                <a href="" target="_blank">糖果</a>
+                <a href="" target="_blank">阿尔卑斯</a>
+            </div>
+
+            <div class="intro">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="head_nav">
+
+            <div class="hd_nav_bd">
+                <div class="main_nav">
+
+                    <div class="main_nav_link">
+                        <a href="">全部商品分类</a>
+                        <ul class="ejcd">
+                            <li>喜糖糖果</li>
+                            <li>坚果炒货</li>
+                            <li>端午粽子</li>
+                            <li>中秋月饼</li>
+                            <li>酒水饮料</li>
+                            <li>糕点零食</li>
+                            <li>粮油副食</li>
+                            <li>四川特产</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <ul class="sub_bav">
+                    <li class="current">首页</li>
+                    <li>喜糖糖果</li>
+                    <li>酒水饮料</li>
+                    <li>零食糕点</li>
+                    <li>粮油副食</li>
+                    <li>四川特产</li>
+                    <li>零食糖果</li>
+                </ul>
+                <div class="hd_car">
+                    <a href="" class="tit">购物车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="location">
+        <span>您当前的位置：</span>
+        <span>购物车 > 商品结算</span>
+    </div>
+
+
+    <form action="" method="" class="shdz">
+        <fieldset style="padding:5px;">
+        <p>收货人姓名&emsp;：<input type="text" class="shp"></p>
+        <p>收货人手机号：<input type="text" class="sht"></p>
+        收货地址：<select name="user.province" id="province"></select>
+                        <select name="user.city" id="city"></select>
+                        <select name="user.area" id="area"></select><br>
+         <input type="button" name="bt" id="bt" value="确认" onclick="getValue()" class="bbt">
+        </fieldset>
+        </form>
+
+
+        <div class="temai_box">
+            <h2>猜你喜欢</h2>
+    
+            <div class="temai_main">
+                <ul class="temai_list">
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list1.jpg" alt=""></p>
+                            <h3>甘源青豌豆</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥19.8元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥28.8元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list2.jpg" alt=""></p>
+                            <h3>欧丽薇兰 纯正橄榄油750ml/瓶 健康食用</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥78.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥93.6元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list3.jpg" alt=""></p>
+                            <h3>费列罗 T30 【30粒装】</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥78.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥93.6元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list4.jpg" alt=""></p>
+                            <h3>徐福记 500g酥心糖散装</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥18.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥21.5元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list5.jpg" alt=""></p>
+                            <h3>甘源青豌豆</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥19.8元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥28.8元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list6.jpg" alt=""></p>
+                            <h3>费列罗 T30 【30粒装】</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥78.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥93.6元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list7.jpg" alt=""></p>
+                            <h3>徐福记 500g酥心糖散装</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥18.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥21.5元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="./list.html">
+                            <p><img src="../images/list8.jpg" alt=""></p>
+                            <h3>金龙鱼 5L食用油大豆油</h3>
+                            <p class="price">
+                                <span class="bd">
+                                    <strong>￥45.0元</strong>
+                                </span>
+                                <span class="sale">
+                                    <b>￥54.0元</b>
+                                </span>
+                                <span class="num">
+                                    销量：<strong>0</strong>
+                                </span>
+                            </p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+</body>
+<script src="../js/cookie.js"></script>
+<script language="javascript" defer>
+    new PCAS("user.province","user.city","user.area","湖北省","武汉市","市辖区");
+    
+    var userInfoDiv = document.getElementById("userInfo");
+    //进行判断
+    var loginId = getCookie("loginId");
+    if (loginId) {
+        var loginName = getCookie("loginName");
+        userInfoDiv.innerHTML = `<span>${loginName}</span><span onclick="userExist()">退出</span>`;
+        // showNum(); //显示已经登录用户的购买情况
+    } else {
+        userInfoDiv.innerHTML = `<span onclick="gotoLogin()">点击登录</span>`;
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "../html/login.html";
+        // window.location.href = "login.html?backurl="+window.location.href;
+    }
+
+
+    </script>
+
+</html>

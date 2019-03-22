@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/list.css">
+
+<body>
+
+    <!-- //头部 -->
+    <div id="header">
+        <div class="hd_bar">
+            <ul class="welcome">
+                <li>
+                    <a href="">零食买卖网</a>
+                </li>
+                <li>
+                    <div id="userInfo">
+                        <!-- leson 退出 -->
+                        <!-- 请登录 -->
+                    </div>
+                </li>
+                <li>
+                    <a href="./register.html">免费注册</a>
+                </li>
+            </ul>
+            <ul class="user">
+                <li>
+                    <i class="vipico"><img src="../images/vipico.png" alt=""></i>
+                    <a href="">手机版</a>
+                </li>
+                <li>
+                    <a href="">会员中心</a>
+                </li>
+            </ul>
+        </div>
+        <div class="head_main">
+
+            <div class="logo">
+                <a href="">
+                    <img src="../images/logo.gif" alt="">
+                </a>
+            </div>
+
+            <div class="search_box">
+                <input id="s_input" class="s_input">
+                <button class="submit" id="submit">搜索</button>
+            </div>
+
+            <div class="search_box_hot">
+                <span>热搜榜：</span>
+                <a href="" target="_blank">旺仔</a>
+                <a href="" target="_blank">糖果</a>
+                <a href="" target="_blank">阿尔卑斯</a>
+                <a href="" target="_blank">旺仔</a>
+                <a href="" target="_blank">糖果</a>
+                <a href="" target="_blank">阿尔卑斯</a>
+            </div>
+
+            <div class="intro">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="../images/webintro-ico.png" alt="">
+                        </a>
+                        <h4>货到付款</h4>
+                        <p>正品低价</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="head_nav">
+
+            <div class="hd_nav_bd">
+                <div class="main_nav">
+
+                    <div class="main_nav_link">
+                        <a href="">全部商品分类</a>
+                        <ul class="ejcd">
+                            <li>喜糖糖果</li>
+                            <li>坚果炒货</li>
+                            <li>端午粽子</li>
+                            <li>中秋月饼</li>
+                            <li>酒水饮料</li>
+                            <li>糕点零食</li>
+                            <li>粮油副食</li>
+                            <li>四川特产</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <ul class="sub_bav">
+                    <li class="current">首页</li>
+                    <li>喜糖糖果</li>
+                    <li>酒水饮料</li>
+                    <li>零食糕点</li>
+                    <li>粮油副食</li>
+                    <li>四川特产</li>
+                    <li>零食糖果</li>
+                </ul>
+                <div class="hd_car">
+                    <a href="" class="tit">购物车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paixu">
+        排序：
+        <span class="paixu1" id="price0" value="desc">价格↑</span>
+        <span class="paixu1" id="price1" value="asc">价格↓</span>
+    </div>
+
+    <div class="temai_box">
+        <h2>商品列表</h2>
+
+        <div class="temai_main" id="temai_main">
+            <!-- <ul class="temai_list">
+                            <li>
+                                <a href="">
+                                    <p><img src="../images/list1.jpg" alt=""></p>
+                                    <h3>甘源青豌豆</h3>
+                                    <p class="price">
+                                        <span class="bd">
+                                            <strong>￥19.8元</strong>
+                                        </span>
+                                        <span class="sale">
+                                            <b>￥28.8元</b>
+                                        </span>
+                                        <span class="num">
+                                            销量：<strong>0</strong>
+                                        </span>
+                                    </p>
+                                </a>
+                            </li>
+                </ul> -->
+        </div>
+
+        <button id="prev">上一页</button>
+        <button id="next">下一页</button>
+
+</body>
+
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/list.js"></script>
+<script>
+    // cookie功能
+    var userInfoDiv = document.getElementById("userInfo");
+    //进行判断
+    var loginId = getCookie("loginId");
+    if (loginId) {
+        var loginName = getCookie("loginName");
+        userInfoDiv.innerHTML = `<span>${loginName}</span><span onclick="userExist()">退出</span>`;
+        // showNum(); //显示已经登录用户的购买情况
+    } else {
+        userInfoDiv.innerHTML = `<span onclick="gotoLogin()">点击登录</span>`;
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "./login.html";
+        // window.location.href = "login.html?backurl="+window.location.href;
+    }
+
+    function userExist() {
+        setCookie("loginId", "", -1);
+        setCookie("loginName", "", -1);
+        gotoLogin();
+    }
+
+
+
+    //     // 搜索功能
+    //     var key = "";
+    //     var temai_main = document.getElementsByClassName("temai_main");
+    //     var submit = document.getElementsByClassName("submit");
+    //     var s_inputInp = document.getElementById("s_input");
+
+    //     $(".submit").click(function () {
+    //         var s_input = s_inputInp.value;
+    //         key = s_input;
+    //         getData(key);
+    //     });
+
+    //     function getData(key) {
+    //         var xhr = new XMLHttpRequest();
+    //         xhr.open("get", `../php/search.php?key=${key}`, true);
+    //         xhr.send();
+    //         xhr.onreadystatechange = function () {
+    //             if (xhr.readyState == 4 && xhr.status == 200) {
+    //                 let result = xhr.responseText;
+    //                 let list = JSON.parse(result);
+    //                 var html = "";
+    //                 list.forEach(function (item) {
+    //                     var {
+    //                         listimg,
+    //                         listname,
+    //                         listprice,
+    //                         listnoprice
+    //                     } = item;
+
+    //                     html +=
+    //                         `<ul class="temai_list">
+    //                         <li>
+    //                             <a href="">
+    //                                 <p><img src="${listimg}" alt=""></p>
+    //                                 <h3>${listname}</h3>
+    //                                 <p class="price">
+    //                                     <span class="bd">
+    //                                         <strong>￥${listprice}元</strong>
+    //                                     </span>
+    //                                     <span class="sale">
+    //                                         <b>￥${listnoprice}元</b>
+    //                                     </span>
+    //                                     <span class="num">
+    //                                         销量：<strong>0</strong>
+    //                                     </span>
+    //                                 </p>
+    //                             </a>
+    //                             </li>
+    //             </ul>`;
+    //                 });
+    //                 $(".temai_main").html(html);
+    //             }
+    //         }
+    //     }
+
+    //  //排序功能
+    //  var paixu = "asc";
+    //     $(".paixu1").click(function () {
+    //         paixu = $(this).attr("value");
+    //         getData1();
+    //     });
+
+    //     function getData1() {
+    //         $.ajax({
+    //             type: "get",
+    //             url: "../php/paixu.php",
+    //             data: {
+    //                 paixu: paixu,
+    //             },
+    //             dataType: "json",
+    //             success: function (list) { //list是一个集合
+    //                 var html = "";
+    //                 list.forEach(function (item) {
+    //                     var {
+    //                         id,
+    //                         listimg,
+    //                         listname,
+    //                         listprice,
+    //                         listnoprice
+    //                     } = item;
+    //                     html +=
+    //                         `<ul class="temai_list">
+    //                         <li>
+    //                             <a href="">
+    //                                 <p><img src="${listimg}" alt=""></p>
+    //                                 <h3>${listname}</h3>
+    //                                 <p class="price">
+    //                                     <span class="bd">
+    //                                         <strong>￥${listprice}元</strong>
+    //                                     </span>
+    //                                     <span class="sale">
+    //                                         <b>￥${listnoprice}元</b>
+    //                                     </span>
+    //                                     <span class="num">
+    //                                         销量：<strong>0</strong>
+    //                                     </span>
+    //                                 </p>
+    //                             </a>
+    //                         </li>
+    //                 </ul>`;
+    //                 });
+    //                 $(".temai_main").html(html);
+    //             },
+    //             error: function (info) {
+    //                 console.log(info);
+    //             }
+    //         });
+    //     }
+
+    var key = "";
+    var order = "id";
+    var paixu = "asc";
+    var paixu1 = "desc";
+    var shownum = 8;
+    var pageIndex = 0;
+    var tbody = document.getElementById("temai_main");
+    var price0 = document.getElementById("price0");
+    var price1 = document.getElementById("price1");
+    var btn = document.getElementById("submit");
+    var prevBtn = document.getElementById("prev");
+    var nextBtn = document.getElementById("next");
+    var s_input = document.getElementById("s_input");
+
+    getData(key, paixu, shownum * pageIndex, shownum)
+    price0.onclick = function () {
+        getData(key, paixu, shownum * pageIndex, shownum)
+    }
+    price1.onclick = function () {
+        getData(key, paixu1, shownum * pageIndex, shownum)
+    }
+    btn.onclick = function () {
+        var key = s_input.value;
+        getData(key, paixu, shownum * pageIndex, shownum)
+    }
+
+    function getData(key, paixu, skipnum, shownum) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("get",
+            `../php/paging.php?key=${key}&paixu=${paixu}&skipnum=${skipnum}&shownum=${shownum}`,
+            true);
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let result = xhr.responseText;
+                let list = JSON.parse(result); //获取该集合
+                var html = "";
+                list.forEach(function (item) {
+                    var {
+                        id,
+                        listimg,
+                        listname,
+                        listprice,
+                        listnoprice
+                    } = item;
+                    html +=
+                        `<ul class="temai_list">
+                        <li data-id="${id}">
+                            
+                                <p><img src="${listimg}" alt=""></p>
+                                <h3>${listname}</h3>
+                                <p class="price">
+                                    <span class="bd">
+                                        <strong>￥${listprice}元</strong>
+                                    </span>
+                                    <span class="sale">
+                                        <b>￥${listnoprice}元</b>
+                                    </span>
+                                    <span class="num">
+                                        销量：<strong>0</strong>
+                                    </span>
+                                </p>
+                         
+                        </li>
+                        </ul>`;
+                });
+                tbody.innerHTML = html;
+            }
+        }
+
+        var req = new XMLHttpRequest();
+        req.open("get", `../php/nextpage.php?key=${key}`, true);
+        req.send();
+        req.onreadystatechange = function () {
+            if (req.readyState == 4 && req.status == 200) {
+                let result = req.responseText;
+                let obj = JSON.parse(result); //获取一共有多少条数据
+                let count = obj["count"];
+                let maxPageIndex = Math.ceil(count / shownum) - 1;
+                prevBtn.disabled = false;
+                prevBtn.onclick = function () {
+                    prevBtn.disabled = true;
+                    pageIndex--;
+                    getData(key, paixu, shownum * pageIndex, shownum)
+                }
+                nextBtn.disabled = false;
+                nextBtn.onclick = function () {
+                    nextBtn.disabled = true;
+                    pageIndex++;
+                    getData(key, paixu, shownum * pageIndex, shownum)
+                }
+                //先都绑定  不满足条件就移除
+                if (pageIndex == 0) {
+                    prevBtn.onclick = null;
+                    prevBtn.disabled = true;
+                }
+                if (pageIndex == maxPageIndex) {
+                    nextBtn.onclick = null;
+                    nextBtn.disabled = true;
+                }
+            }
+        }
+    }
+$(document).on('click','#temai_main li',function(){
+    var id = $(this).attr("data-id");
+    window.location.href = "./detail.html?id="+id;
+})
+</script>
+
+</html>

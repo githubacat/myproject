@@ -1,0 +1,363 @@
+#header {
+    background: #fff;
+    margin: auto;
+}
+
+.hd_bar {
+    height: 34px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    line-height: 34px;
+}
+
+.hd_bar .welcome {
+    margin-left: 200px;
+}
+
+.hd_bar .welcome li {
+    float: left;
+    margin-left: 20px;
+}
+
+.hd_bar .user {
+    margin-right: 200px;
+}
+
+.hd_bar .user li {
+    float: right;
+    margin-right: 20px;
+}
+
+.vipico img {
+    width: 12px;
+    height: 17px;
+    vertical-align: middle;
+}
+
+.head_main {
+    width: 1196px;
+    margin: 15px auto 0;
+    position: relative;
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 90px;
+}
+
+.search_box {
+    display: inline-block;
+    width: 460px;
+    height: 32px;
+    border-color: #09c762;
+    border: 2px solid #1e9246;
+    margin-bottom: 19px;
+}
+
+.search_box .s_input {
+    float: left;
+    width: 228px;
+    margin: 5px;
+    height: 20px;
+    line-height: 20px;
+    color: #bbb;
+    outline: 0;
+    border: 0;
+    background: 0;
+}
+
+.search_box .submit {
+    font-size: 15px;
+    color: #fff;
+    float: right;
+    height: 32px;
+    width: 62px;
+    padding-left: 6px;
+    border: 0;
+    background-color: #1e9246;
+    cursor: pointer;
+    letter-spacing: 5px;
+    overflow: hidden;
+
+}
+
+.search_box .submit:hover {
+    color: yellow;
+}
+
+.search_box_hot {
+    display: inline-block;
+    position: absolute;
+    top: 46px;
+    right: 424px;
+    width: 450px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.search_box_hot span {
+    color: #999;
+}
+
+.search_box_hot a {
+    color: #666;
+    margin-left: 10px;
+}
+
+.search_box_hot a:hover {
+    color: #09c762;
+}
+
+.intro {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 352px;
+    height: 58px;
+    padding-top: 20px;
+}
+
+.intro ul {
+    margin-bottom: 16px;
+}
+
+.intro li {
+    float: left;
+    width: 100px;
+    height: 46px;
+    overflow: hidden;
+    margin-top: -10px;
+}
+
+.intro li h4 {
+    margin-top: -30px;
+    margin-left: 40px;
+}
+
+.intro li img {
+    width: 30px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.intro li p {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.head_nav {
+    background-color: #09c762;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.hd_nav_bd {
+    position: relative;
+    width: 1196px;
+    margin: 0 auto;
+}
+
+.main_nav_link {
+    position: relative;
+    display: inline-block;
+    width: 214px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #000;
+    text-align: center;
+}
+
+.main_nav_link a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ejcd {
+    position: absolute;
+    display: none;
+    box-shadow: -2px 4px 4px rgba(200, 200, 200, 0.3);
+    z-index: 11;
+}
+
+.ejcd li {
+    width: 214px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    opacity: .6;
+}
+
+.main_nav_link:hover .ejcd {
+    display: block;
+}
+
+.sub_bav {
+    height: 35px;
+    margin-left: 214px;
+    margin-top: -35.5px;
+    line-height: 35px;
+    background-color: #09c762;
+}
+
+.sub_bav li {
+    width: 112px;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    color: white;
+}
+
+.sub_bav li:hover {
+    background-color: black;
+    opacity: .3;
+}
+
+.sub_bav .current {
+    width: 56px;
+    background-color: black;
+    opacity: .5;
+}
+
+.hd_car {
+    margin-top: -36px;
+    text-align: center;
+}
+
+.hd_car .tit {
+    width: 168px;
+    height: 27px;
+    padding-top: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+    float: right;
+    background: url(../images/car.png) no-repeat;
+    background-size: 30px 30px;
+    background-color: #fff;
+}
+
+#location {
+    width: 1196px;
+    margin: auto;
+    margin-top: 20px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.shdz{
+    width: 1196px;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+}
+.shdz p{
+    height: 35px;
+    line-height: 35px;
+    background-color: #fff;
+}
+.sht{
+    width: 150px;
+    background-color: #fff;
+}
+.shp{
+    width: 150px;
+    background-color: #fff;
+}
+.shdz select{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.bbt{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    color: white;
+    border: 1px solid #ff4400;
+    background-color: #ff4400;
+}
+.temai_box{
+    width: 1196px;
+    margin: auto;
+    margin-top: 30px;
+}
+.temai_box h2{
+    font-size: 20px;
+    font-family: 黑体;
+    padding-bottom: 8px;
+    font-weight: 400;
+}
+.temai_list li{
+    float: left;
+    width: 277px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 0 20px 20px 0;
+    box-shadow: 0 0 3px rgba(200,200,200,0.5);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.temai_list li img{
+    width: 240px;
+    height: 240px;
+}
+.temai_list li p{
+    background-color: #fff;
+}
+.temai_list li h3{
+    background-color: #fff;
+    margin: 13px 13px 5px;
+    height: 44px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+.temai_list li h3:hover{
+    color: #09c762;
+}
+.temai_list li p:nth-child(1){
+    text-align: center;
+}
+.temai_list li p.price{
+    padding: 5px 12px 17px 12px;
+    height: 28px;
+    overflow: hidden;
+    font-size: 18px;
+    position: relative
+}
+.temai_list li p.price .bd{
+    font-size: 20px;
+    color: #09c762;
+    font-weight: bold;
+}
+.temai_list li p.price .sale{
+    height: 21px;
+    line-height: 21px;
+    padding-left: 15px;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    text-decoration: line-through
+}
+.temai_list li p.price .sale b{
+    margin-right: 3px;
+    font-weight: 400;
+}
+.temai_list li p.price .num{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    color: #666;
+}
+.temai_list li p.price .num strong{
+    font-weight: 400;
+}

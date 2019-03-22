@@ -1,0 +1,236 @@
+#header {
+    background: #fff;
+    margin: auto;
+}
+
+.hd_bar {
+    height: 34px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+    line-height: 34px;
+}
+
+.hd_bar .welcome {
+    margin-left: 200px;
+}
+
+.hd_bar .welcome li {
+    float: left;
+    margin-left: 20px;
+}
+
+.hd_bar .user {
+    margin-right: 200px;
+}
+
+.hd_bar .user li {
+    float: right;
+    margin-right: 20px;
+}
+
+.vipico img {
+    width: 12px;
+    height: 17px;
+    vertical-align: middle;
+}
+#carmsg{
+    width: 1080px;
+    margin: auto;
+    margin-top: 30px;
+}
+#fr {
+    float:right;
+}
+#fr .gbtn{
+    width: 74px;
+    height: 28px;
+    text-align: center;
+    padding: 5px 12px;
+    line-height: 28px;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    color: #666;
+    background-color: #efefef;
+}
+#carbox{
+    width: 1080px;
+    margin: auto;
+    margin-top: 60px;
+}
+#hd{
+    border: 1px solid #e4e4e4;
+    border-bottom-color: #bbb;
+    margin-top: 70px;
+}
+#hd span{
+    height: 52px;
+    margin-left: 200px;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 52px;
+}
+#carbox tr{
+    height: 100px;
+    line-height: 100px;
+}
+#carbox ul{
+    height: 84px;
+    border-bottom: 1px dotted #cbcbcb;
+}
+#carbox ul li{
+    float: left;
+    height: 84px;
+    line-height: 84px;
+}
+.checkbox img{
+    vertical-align: middle;
+}
+.count-input{
+    width: 50px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+}
+.goods{
+    margin-left: 95px;
+}
+.price_car{
+    margin-left: 135px;
+}
+.count{
+    margin-left: 175px;
+}
+.subtotal{
+    margin-left: 160px;
+}
+.operation{
+    margin-left: 50px;
+}
+.fkcle{
+    width: 1080px;
+    margin:auto;
+    padding-top: 20px;
+}
+.shop{
+    width: 100px;
+    height: 100px;
+}
+.grbtn{
+    width: 88px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    border: 1px solid #c4c4c4;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #efefef;
+    color: #333;
+    margin-top: 20px;
+}
+.priceto{
+    float: right;
+    margin-top: -100px;
+}
+.topricego{
+    font-size: 20px;
+    font-family: arial;
+    margin: 0 3px;
+    color: #ff4400;
+}
+.gotobtn{
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    width: 94px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #ff4400;
+    color: white;
+    margin-top: 10px;
+    float: right;
+}
+.temai_box{
+    width: 1196px;
+    margin: auto;
+}
+.temai_box h2{
+    font-size: 20px;
+    font-family: 黑体;
+    padding-bottom: 8px;
+    font-weight: 400;
+}
+.temai_list li{
+    float: left;
+    width: 277px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 0 20px 20px 0;
+    box-shadow: 0 0 3px rgba(200,200,200,0.5);
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.temai_list li img{
+    width: 240px;
+    height: 240px;
+}
+.temai_list li p{
+    background-color: #fff;
+}
+.temai_list li h3{
+    background-color: #fff;
+    margin: 13px 13px 5px;
+    height: 44px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+.temai_list li h3:hover{
+    color: #09c762;
+}
+.temai_list li p:nth-child(1){
+    text-align: center;
+}
+.temai_list li p.price{
+    padding: 5px 12px 17px 12px;
+    height: 28px;
+    overflow: hidden;
+    font-size: 18px;
+    position: relative
+}
+.temai_list li p.price .bd{
+    font-size: 20px;
+    color: #09c762;
+    font-weight: bold;
+}
+.temai_list li p.price .sale{
+    height: 21px;
+    line-height: 21px;
+    padding-left: 15px;
+    color: #999;
+    font-size: 14px;
+    overflow: hidden;
+    text-decoration: line-through
+}
+.temai_list li p.price .sale b{
+    margin-right: 3px;
+    font-weight: 400;
+}
+.temai_list li p.price .num{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    color: #666;
+}
+.temai_list li p.price .num strong{
+    font-weight: 400;
+}
